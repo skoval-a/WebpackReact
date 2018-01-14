@@ -1,0 +1,74 @@
+body {
+    min-width: 320px;
+    position: relative;
+    font-size: 14px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    color: $base-text-color;
+    line-height: 1;
+    overflow-x: hidden;
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+input {
+    required: valid;
+    outline: none;
+    @include transition(0.5s);
+    &:focus {
+        required: invalid;
+    }
+}
+
+textarea {
+    required: valid;
+    color: $base-text-color;
+    &:focus {
+        required: invalid;
+        color: $base-text-color;
+    }
+}
+
+button,
+input[type='submit'] {
+    cursor: pointer;
+    @include transition(0.5s);
+    background: transparent;
+    border: 1px solid $base-text-color;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $base-text-color;
+    cursor: pointer;
+    @include transition(0.5s);
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    background: #ececec;
+}
+
+
+.main__container {
+    width: 100%;
+    max-width: 1300px;
+    min-height: calc(100vh - 100px - 100px);
+    padding: 0 15px;
+    margin: 0 auto;
+    h1 {
+        text-align: center;
+        padding: 20px;
+    }
+}

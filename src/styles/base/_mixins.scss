@@ -1,0 +1,83 @@
+@import "_variables.scss";
+
+@mixin transition($time) {
+    transition-property: all;
+    transition-duration: $time;
+    transition-timing-function: ease-in-out;
+}
+
+@mixin placeholder($color, $opacity, $font-size, $font-family) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+}
+
+@mixin button-bg-1($color) {
+    background: $color;
+    &:hover {
+        background: darken($color, 15%);
+    }
+}
+
+@mixin button-bg-2($color-1, $color-2) {
+    background: $color-1;
+    color: $color-2;
+    &:hover {
+        background: $color-2;
+        color: $color-1;
+    }
+}
+
+@mixin text-elipsis($width) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $heigh;
+}
+
+@mixin display-flex($flex-direction, $align-horizontal, $align-vertical) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $align-horizontal;
+    align-items: $align-vertical;
+}
+
+
+
+
+
+
+
+
+
+

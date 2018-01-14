@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 50px;
+    &__logo {
+    
+    }
+    &__nav {
+    
+    }
+    &__nav-list {
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item {
+        margin-right: 100px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &.active {
+            color: #1cbee2;
+        }
+    }
+}
